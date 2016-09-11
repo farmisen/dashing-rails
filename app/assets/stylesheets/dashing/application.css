@@ -11,3 +11,20 @@
  *= require dashing
  *= require_tree .
  */
+
+.gridster {
+    margin: 0px !important;
+}
+
+
+h1 {
+    margin-bottom: 6px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.widget_title > h1 {
+  font-size: 30px;
+  font-weight: 800;
+}
