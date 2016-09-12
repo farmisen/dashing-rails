@@ -15,6 +15,8 @@ module Dashing
       end
     rescue IOError
       logger.info "[Dashing][#{Time.now.utc.to_s}] Stream closed"
+    rescue StandardError => err
+      logger.info "[Dashing][#{Time.now.utc.to_s}] Error of type #{err.class}: #{err.message}"   
     ensure
       @redis.quit
       response.stream.close
