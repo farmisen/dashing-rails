@@ -18,7 +18,7 @@ module Dashing
     rescue StandardError => err
       logger.info "[Dashing][#{Time.now.utc.to_s}] Error of type #{err.class}: #{err.message}"   
     ensure
-      @redis.quit
+      @redis.quit unless @redis.nil?
       response.stream.close
     end
 
